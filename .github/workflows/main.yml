@@ -3,6 +3,7 @@ name: ZAnime Build Unsigned IPA
 on:
   push:
     branches: [ "main" ]
+  workflow_dispatch: # يتيح لك تشغيل البناء يدوياً من GitHub
 
 jobs:
   build:
@@ -15,6 +16,11 @@ jobs:
       - name: Select Xcode Version
         run: sudo xcode-select -s /Applications/Xcode_16.app/Contents/Developer
 
+      - name: Debug - List Files (To Verify Structure)
+        run: |
+          echo "Current Directory Structure:"
+          find . -maxdepth 3 -not -path '*/.*'
+
       - name: Build Archive
         run: |
           xcodebuild archive \
@@ -25,13 +31,19 @@ jobs:
             CODE_SIGNING_ALLOWED=NO \
             CODE_SIGNING_REQUIRED=NO \
             CODE_SIGN_IDENTITY="" \
-            AD_HOC_CODE_SIGNING_ALLOWED=YES
+            AD_HOC_CODE_SIGNING_ALLOWED=YES \
+            COMPILER_INDEX_STORE_ENABLE=NO
 
       - name: Prepare IPA Structure
         run: |
           mkdir -p Payload
-          cp -r build/ZAnime.xcarchive/Products/Applications/ZAnime.app Payload/
-          zip -r ZAnime_Unsigned.ipa Payload
+          if [ -d "build/ZAnime.xcarchive/Products/Applications/ZAnime.app" ]; then
+            cp -r build/ZAnime.xcarchive/Products/Applications/ZAnime.app Payload/
+            zip -r ZAnime_Unsigned.ipa Payload
+          else
+            echo "Error: ZAnime.app not found in archive!"
+            exit 1
+          fi
 
       - name: Upload IPA Artifact
         uses: actions/upload-artifact@v4
