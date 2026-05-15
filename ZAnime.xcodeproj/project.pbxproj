@@ -18,15 +18,15 @@
 /* END PBXBuildFile section */
 
 /* BEGIN PBXFileReference section */
-		22010101 /* ZAnimeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZAnimeApp.swift; sourceTree = "<group>"; };
-		22010102 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models/Models.swift; sourceTree = "<group>"; };
-		22010103 /* CloudflareManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/CloudflareManager.swift; sourceTree = "<group>"; };
-		22010104 /* ScraperManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/ScraperManager.swift; sourceTree = "<group>"; };
-		22010105 /* ZAnimeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModels/ZAnimeViewModel.swift; sourceTree = "<group>"; };
-		22010106 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/HomeView.swift; sourceTree = "<group>"; };
-		22010107 /* AnimeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/AnimeDetailView.swift; sourceTree = "<group>"; };
-		22010108 /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/PlayerView.swift; sourceTree = "<group>"; };
-		22010109 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22010101 /* ZAnimeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ZAnimeApp.swift; path = ZAnime/ZAnimeApp.swift; sourceTree = "<group>"; };
+		22010102 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Models.swift; path = ZAnime/Models.swift; sourceTree = "<group>"; };
+		22010103 /* CloudflareManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CloudflareManager.swift; path = ZAnime/CloudflareManager.swift; sourceTree = "<group>"; };
+		22010104 /* ScraperManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ScraperManager.swift; path = ZAnime/ScraperManager.swift; sourceTree = "<group>"; };
+		22010105 /* ZAnimeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ZAnimeViewModel.swift; path = ZAnime/ZAnimeViewModel.swift; sourceTree = "<group>"; };
+		22010106 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeView.swift; path = ZAnime/HomeView.swift; sourceTree = "<group>"; };
+		22010107 /* AnimeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AnimeDetailView.swift; path = ZAnime/AnimeDetailView.swift; sourceTree = "<group>"; };
+		22010108 /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PlayerView.swift; path = ZAnime/PlayerView.swift; sourceTree = "<group>"; };
+		22010109 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ZAnime/Info.plist; sourceTree = "<group>"; };
 		77010101 /* ZAnime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZAnime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* END PBXFileReference section */
 
@@ -62,7 +62,6 @@
 				22010109 /* Info.plist */,
 			);
 			name = ZAnime;
-			path = ZAnime;
 			sourceTree = "<group>";
 		};
 /* END PBXGroup section */
@@ -128,7 +127,6 @@
 				CODE_SIGN_STYLE = Manual;
 				INFOPLIST_FILE = ZAnime/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
-				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zanime.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -146,7 +144,6 @@
 				CODE_SIGN_STYLE = Manual;
 				INFOPLIST_FILE = ZAnime/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
-				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zanime.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
