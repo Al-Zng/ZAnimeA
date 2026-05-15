@@ -16,20 +16,17 @@ jobs:
       - name: Select Xcode Version
         run: sudo xcode-select -s /Applications/Xcode_16.app/Contents/Developer
 
-      - name: Debug - Verify Paths
-        run: |
-          echo "Current Directory Content:"
-          ls -F
-          echo "--------------------------"
-          echo "ZAnime Directory Content:"
-          ls -R ZAnime/
-
       - name: Build Archive
-        # هذا السطر يضمن تنفيذ الأمر من داخل المجلد الذي يحتوي على .xcodeproj
-        working-directory: ZAnime
         run: |
+          # هذه الخطوة تبحث عن ملف الـ xcodeproj أينما كان وتدخل لمجلده
+          PROJECT_PATH=$(find . -name "*.xcodeproj" -print -quit)
+          PROJECT_DIR=$(dirname "$PROJECT_PATH")
+          
+          echo "Found project at: $PROJECT_PATH"
+          cd "$PROJECT_DIR"
+          
           xcodebuild archive \
-            -project ZAnime.xcodeproj \
+            -project *.xcodeproj \
             -scheme ZAnime \
             -archivePath build/ZAnime.xcarchive \
             -destination 'generic/platform=iOS' \
@@ -39,14 +36,16 @@ jobs:
             AD_HOC_CODE_SIGNING_ALLOWED=YES
 
       - name: Prepare IPA Structure
-        working-directory: ZAnime
         run: |
-          mkdir -p Payload
-          if [ -d "build/ZAnime.xcarchive/Products/Applications/ZAnime.app" ]; then
-            cp -r build/ZAnime.xcarchive/Products/Applications/ZAnime.app Payload/
-            zip -r ../ZAnime_Unsigned.ipa Payload
+          # البحث عن الـ .app الناتج وضغطه
+          APP_PATH=$(find . -name "ZAnime.app" -type d -path "*/build/*" -print -quit)
+          
+          if [ -n "$APP_PATH" ]; then
+            mkdir -p Payload
+            cp -r "$APP_PATH" Payload/
+            zip -r ZAnime_Unsigned.ipa Payload
           else
-            echo "خطأ: لم يتم العثور على ملف الـ app الناتج!"
+            echo "Error: Could not find ZAnime.app"
             exit 1
           fi
 
