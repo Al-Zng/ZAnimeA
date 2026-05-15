@@ -1,29 +1,40 @@
-name: ZAnime CI
+name: ZAnime Build Unsigned IPA
 
 on:
   push:
     branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
 
 jobs:
   build:
-    name: Build and Test iOS App
-    runs-on: macos-latest
+    name: Build Unsigned IPA
+    runs-on: macos-15
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      - name: Set up Xcode
-        uses: maxim-lobanov/setup-xcode@v1
-        with:
-          xcode-version: '16.0'
+      - name: Select Xcode Version
+        run: sudo xcode-select -s /Applications/Xcode_16.app/Contents/Developer
 
-      - name: Build
+      - name: Build Archive
         run: |
-          xcodebuild clean build \
+          xcodebuild archive \
             -project ZAnime.xcodeproj \
             -scheme ZAnime \
-            -destination 'platform=iOS Simulator,name=iPhone 15 Pro,OS=latest' \
+            -archivePath build/ZAnime.xcarchive \
+            -destination 'generic/platform=iOS' \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGNING_REQUIRED=NO \
             CODE_SIGN_IDENTITY="" \
-            CODE_SIGNING_REQUIRED=NO
+            AD_HOC_CODE_SIGNING_ALLOWED=YES
+
+      - name: Prepare IPA Structure
+        run: |
+          mkdir -p Payload
+          cp -r build/ZAnime.xcarchive/Products/Applications/ZAnime.app Payload/
+          zip -r ZAnime_Unsigned.ipa Payload
+
+      - name: Upload IPA Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ZAnime-Unsigned-IPA
+          path: ZAnime_Unsigned.ipa
