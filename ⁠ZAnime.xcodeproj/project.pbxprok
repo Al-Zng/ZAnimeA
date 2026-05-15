@@ -1,0 +1,140 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 54;
+	objects = {
+
+/* BEGIN PBXBuildFile section */
+		11010101/* App.swift */ = {isa = PBXBuildFile; fileRef = 22010101 /* App.swift */; };
+		11010102/* Models.swift */ = {isa = PBXBuildFile; fileRef = 22010102 /* Models.swift */; };
+		11010103/* Cloudflare.swift */ = {isa = PBXBuildFile; fileRef = 22010103 /* Cloudflare.swift */; };
+		11010104/* Scraper.swift */ = {isa = PBXBuildFile; fileRef = 22010104 /* Scraper.swift */; };
+		11010105/* ViewModel.swift */ = {isa = PBXBuildFile; fileRef = 22010105 /* ViewModel.swift */; };
+		11010106/* HomeView.swift */ = {isa = PBXBuildFile; fileRef = 22010106 /* HomeView.swift */; };
+		11010107/* DetailView.swift */ = {isa = PBXBuildFile; fileRef = 22010107 /* DetailView.swift */; };
+		11010108/* PlayerView.swift */ = {isa = PBXBuildFile; fileRef = 22010108 /* PlayerView.swift */; };
+/* END PBXBuildFile section */
+
+/* BEGIN PBXFileReference section */
+		22010101 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZAnimeApp.swift; sourceTree = "<group>"; };
+		22010102 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models/Models.swift; sourceTree = "<group>"; };
+		22010103 /* Cloudflare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/CloudflareManager.swift; sourceTree = "<group>"; };
+		22010104 /* Scraper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/ScraperManager.swift; sourceTree = "<group>"; };
+		22010105 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModels/ZAnimeViewModel.swift; sourceTree = "<group>"; };
+		22010106 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/HomeView.swift; sourceTree = "<group>"; };
+		22010107 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/AnimeDetailView.swift; sourceTree = "<group>"; };
+		22010108 /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/PlayerView.swift; sourceTree = "<group>"; };
+		22010109 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* END PBXFileReference section */
+
+/* BEGIN PBXGroup section */
+		33010101 /* CustomGroup */ = {
+			isa = PBXGroup;
+			children = (
+				22010101 /* App.swift */,
+				33010102 /* Models */,
+				33010103 /* Services */,
+				33010104 /* ViewModels */,
+				33010105 /* Views */,
+				22010109 /* Info.plist */,
+			);
+			path = ZAnime;
+			sourceTree = "<group>";
+		};
+		33010102 /* Models */ = { isa = PBXGroup; children = (22010102 /* Models.swift */); path = Models; sourceTree = "<group>"; };
+		33010103 /* Services */ = { isa = PBXGroup; children = (22010103 /* Cloudflare.swift */, 22010104 /* Scraper.swift */); path = Services; sourceTree = "<group>"; };
+		33010104 /* ViewModels */ = { isa = PBXGroup; children = (22010105 /* ViewModel.swift */); path = ViewModels; sourceTree = "<group>"; };
+		33010105 /* Views */ = { isa = PBXGroup; children = (22010106 /* HomeView.swift */, 22010107 /* DetailView.swift */, 22010108 /* PlayerView.swift */); path = Views; sourceTree = "<group>"; };
+/* END PBXGroup section */
+
+/* BEGIN PBXNativeTarget section */
+		44010101 /* ZAnime */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55010101 /* BuildConfigs */;
+			buildPhases = (
+				66010101 /* Sources */,
+				66010102 /* Frameworks */,
+			);
+			buildRules = ();
+			dependencies = ();
+			name = ZAnime;
+			productName = ZAnime;
+			productReference = 77010101 /* ZAnime.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* END PBXNativeTarget section */
+
+/* BEGIN PBXProject section */
+		88010101 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1500;
+				TargetAttributes = {
+					44010101 = { CreatedOnToolsVersion = 15.0; };
+				};
+			};
+			buildConfigurationList = 55010102 /* ProjectBuildConfigs */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (en, Base);
+			mainGroup = 33010101 /* CustomGroup */;
+			productRefGroup = 33010101 /* CustomGroup */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (44010101 /* ZAnime */);
+		};
+/* END PBXProject section */
+
+/* BEGIN PBXSourcesBuildPhase section */
+		66010101 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11010101, 11010102, 11010103, 11010104, 11010105, 11010106, 11010107, 11010108,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* END PBXSourcesBuildPhase section */
+
+/* BEGIN PBXFrameworksBuildPhase section */
+		66010102 /* Frameworks */ = { isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+/* END PBXFrameworksBuildPhase section */
+
+/* BEGIN XCBuildConfiguration section */
+		99010101 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ZAnime/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zanime.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		99010102 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ZAnime/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zanime.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* END XCBuildConfiguration section */
+
+/* BEGIN XCConfigurationList section */
+		55010101 /* BuildConfigs */ = { isa = XCConfigurationList; buildConfigurations = (99010101, 99010102); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+		55010102 /* ProjectBuildConfigs */ = { isa = XCConfigurationList; buildConfigurations = (99010101, 99010102); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+/* END XCConfigurationList section */
+	};
+	rootObject = 88010101 /* Project object */;
+}
