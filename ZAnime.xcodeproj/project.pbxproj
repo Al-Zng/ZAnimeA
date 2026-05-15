@@ -7,24 +7,24 @@
 	objects = {
 
 /* BEGIN PBXBuildFile section */
-		11010101 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22010101 /* App.swift */; };
+		11010101 /* ZAnimeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22010101 /* ZAnimeApp.swift */; };
 		11010102 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22010102 /* Models.swift */; };
-		11010103 /* Cloudflare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22010103 /* Cloudflare.swift */; };
-		11010104 /* Scraper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22010104 /* Scraper.swift */; };
-		11010105 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22010105 /* ViewModel.swift */; };
+		11010103 /* CloudflareManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22010103 /* CloudflareManager.swift */; };
+		11010104 /* ScraperManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22010104 /* ScraperManager.swift */; };
+		11010105 /* ZAnimeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22010105 /* ZAnimeViewModel.swift */; };
 		11010106 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22010106 /* HomeView.swift */; };
-		11010107 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22010107 /* DetailView.swift */; };
+		11010107 /* AnimeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22010107 /* AnimeDetailView.swift */; };
 		11010108 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22010108 /* PlayerView.swift */; };
 /* END PBXBuildFile section */
 
 /* BEGIN PBXFileReference section */
-		22010101 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZAnimeApp.swift; sourceTree = "<group>"; };
+		22010101 /* ZAnimeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZAnimeApp.swift; sourceTree = "<group>"; };
 		22010102 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models/Models.swift; sourceTree = "<group>"; };
-		22010103 /* Cloudflare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/CloudflareManager.swift; sourceTree = "<group>"; };
-		22010104 /* Scraper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/ScraperManager.swift; sourceTree = "<group>"; };
-		22010105 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModels/ZAnimeViewModel.swift; sourceTree = "<group>"; };
+		22010103 /* CloudflareManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/CloudflareManager.swift; sourceTree = "<group>"; };
+		22010104 /* ScraperManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/ScraperManager.swift; sourceTree = "<group>"; };
+		22010105 /* ZAnimeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModels/ZAnimeViewModel.swift; sourceTree = "<group>"; };
 		22010106 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/HomeView.swift; sourceTree = "<group>"; };
-		22010107 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/AnimeDetailView.swift; sourceTree = "<group>"; };
+		22010107 /* AnimeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/AnimeDetailView.swift; sourceTree = "<group>"; };
 		22010108 /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/PlayerView.swift; sourceTree = "<group>"; };
 		22010109 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77010101 /* ZAnime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZAnime.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,13 +52,13 @@
 		33010102 /* ZAnime */ = {
 			isa = PBXGroup;
 			children = (
-				22010101 /* App.swift */,
+				22010101 /* ZAnimeApp.swift */,
 				22010102 /* Models.swift */,
-				22010103 /* Cloudflare.swift */,
-				22010104 /* Scraper.swift */,
-				22010105 /* ViewModel.swift */,
+				22010103 /* CloudflareManager.swift */,
+				22010104 /* ScraperManager.swift */,
+				22010105 /* ZAnimeViewModel.swift */,
 				22010106 /* HomeView.swift */,
-				22010107 /* DetailView.swift */,
+				22010107 /* AnimeDetailView.swift */,
 				22010108 /* PlayerView.swift */,
 				22010109 /* Info.plist */,
 			);
@@ -121,13 +121,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11010101 /* App.swift in Sources */,
+				11010101 /* ZAnimeApp.swift in Sources */,
 				11010102 /* Models.swift in Sources */,
-				11010103 /* Cloudflare.swift in Sources */,
-				11010104 /* Scraper.swift in Sources */,
-				11010105 /* ViewModel.swift in Sources */,
+				11010103 /* CloudflareManager.swift in Sources */,
+				11010104 /* ScraperManager.swift in Sources */,
+				11010105 /* ZAnimeViewModel.swift in Sources */,
 				11010106 /* HomeView.swift in Sources */,
-				11010107 /* DetailView.swift in Sources */,
+				11010107 /* AnimeDetailView.swift in Sources */,
 				11010108 /* PlayerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,7 +139,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = NO;
@@ -152,6 +155,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zanime.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -161,13 +165,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = ZAnime/Info.plist;
-				IPHentityOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zanime.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
