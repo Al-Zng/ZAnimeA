@@ -14,6 +14,9 @@
 		11010106 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22010106; };
 		11010107 /* AnimeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22010107; };
 		11010108 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22010108; };
+		11010109 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99010103; };
+		11010110 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99010104; };
+		11010111 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99010105; };
 /* END PBXBuildFile section */
 
 /* BEGIN PBXFileReference section */
@@ -27,6 +30,9 @@
 		22010108 /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/PlayerView.swift; sourceTree = "<group>"; };
 		22010109 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77010101 /* ZAnime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZAnime.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		99010103 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		99010104 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		99010105 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 /* END PBXFileReference section */
 
 /* BEGIN PBXGroup section */
@@ -44,6 +50,14 @@
 				22010101, 22010102, 22010103, 22010104, 22010105, 22010106, 22010107, 22010108, 22010109,
 			);
 			path = ZAnime;
+			sourceTree = "<group>";
+		};
+		99010106 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				99010103, 99010104, 99010105,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* END PBXGroup section */
@@ -84,7 +98,12 @@
 /* END PBXSourcesBuildPhase section */
 
 /* BEGIN PBXFrameworksBuildPhase section */
-		66010102 /* Frameworks */ = { isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+		66010102 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (11010109, 11010110, 11010111);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* END PBXFrameworksBuildPhase section */
 
 /* BEGIN XCBuildConfiguration section */
